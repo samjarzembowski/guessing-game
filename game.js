@@ -1,13 +1,26 @@
+var user = prompt('Please enter your name:');
+alert('Thank you, ' + user + '.  Press ok to play the Guessing Game!')
+
 var question1 = prompt('Was I born in Massachusetts?');
+
+if (question1 === 'yes') {
+  alert('Correct!  I was born in Massachusetts.');
+} else {
+  alert('Sorry!  I was actually born in Massachusetts.')
+}
+
 var question2 = prompt('Did I grow up in Illinois?');
+
+if (question2 === 'yes') {
+  alert('Correct!  I did grow up in Illinois.');
+} else {
+  alert('Sorry!  I actually did grow up in Illinois.');
+}
+
 var question3 = prompt('Do I volunteer at Woodland Park Zoo?');
 
-console.log('question1 response: ' + question1);
-console.log('question2 response: ' + question2);
-console.log('question3 response: ' + question3);
-
-alert('Your answer to "Was I born in Massachusetts" was ' + question1);
-alert('Your answer to "Did I grow up in Illinois" was ' + question2);
-alert('Your answer to "Do I volunteer at Woodland Park Zoo" was ' + question3);
-
-
+if (question3 === 'yes') {
+  alert('Correct!  I do volunteer at Woodland Park Zoo.');
+} else {
+  alert('Sorry!  I actually do volunteer at Woodland Park Zoo.');
+}
