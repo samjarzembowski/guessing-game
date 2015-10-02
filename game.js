@@ -1,7 +1,10 @@
 var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
-var happy = document.getElementById('happy');
+var summary = document.getElementById('summary');
+var happy1 = document.getElementById('happy1');
+var happy2 = document.getElementById('happy2');
+var happy3 = document.getElementById('happy3');
 var questions = ['Was I born in Massachusetts?', 'Did I grow up in Illinois?', 'Do I volunteer at Woodland Park Zoo?'];
 var answers = ["yes", "y"];
 
@@ -15,7 +18,7 @@ function ques1(){
 
 	if (question1 === answers[0] || question1 === answers[1]) {
 		one.innerHTML = 'Correct ' + user +'!  I was born in Massachusetts.';
-		happy.innerHTML = '<img src="images/happyface.jpeg" />' ;
+		happy1.innerHTML = '<img src="images/happyface.jpeg" />' ;
 		correctAnswers++;
 		} else {
 		one.innerHTML = 'Sorry ' + user +'!  I was actually born in Massachusetts.';
@@ -29,6 +32,7 @@ function ques2(){
 
 	if (question2 === answers[0] || question2 === answers[1]) {
 		two.innerHTML = 'Correct ' + user +'!  I did grow up in Illinois.';
+		happy2.innerHTML = '<img src="images/happyface.jpeg" />' ;
 		correctAnswers++;
 		} else {
 		two.innerHTML = 'Sorry ' + user +'!  I actually did grow up in Illinois.';
@@ -41,6 +45,7 @@ function ques3(){
 
 	if (question3 === answers[0] || question3 === answers[1]) {
 		three.innerHTML = 'Correct ' + user +'!  I do volunteer at Woodland Park Zoo.';
+		happy3.innerHTML = '<img src="images/happyface.jpeg" />' ;
 		correctAnswers++;
 		} else {
 		three.innerHTML = 'Sorry ' + user +'!  I actually do volunteer at Woodland Park Zoo.';
@@ -48,8 +53,8 @@ function ques3(){
 }
 
 ques1();
-ques2();
-ques3();
+window.setTimeout(ques2, 1000);
+window.setTimeout(ques3, 1000);
 
-alert('Thanks for playing, ' + user + '.  You had ' + correctAnswers + ' out of 3 correct answers!');
+summary.innerHTML = 'Thanks for playing, ' + user + '.  You had ' + correctAnswers + ' out of 3 correct answers!' ;
 
