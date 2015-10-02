@@ -1,6 +1,7 @@
 var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
+var happy = document.getElementById('happy');
 var questions = ['Was I born in Massachusetts?', 'Did I grow up in Illinois?', 'Do I volunteer at Woodland Park Zoo?'];
 var answers = ["yes", "y"];
 
@@ -14,6 +15,7 @@ function ques1(){
 
 	if (question1 === answers[0] || question1 === answers[1]) {
 		one.innerHTML = 'Correct ' + user +'!  I was born in Massachusetts.';
+		happy.innerHTML = '<img src="images/happyface.jpeg" />' ;
 		correctAnswers++;
 		} else {
 		one.innerHTML = 'Sorry ' + user +'!  I was actually born in Massachusetts.';
